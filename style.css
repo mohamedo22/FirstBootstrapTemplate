@@ -1,0 +1,333 @@
+:root {
+    --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+  }
+  
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --accent-color-more-white: #5fcf81da; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #272828;  /* The default color of the main navmenu links */
+    --nav-hover-color: #5fcf80; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  /* Custom CSS to enable hover */
+  .mainDropdown:hover > .dropdown-menu {
+    display: block;
+    animation: showDropdownMain  800ms;
+    animation-fill-mode:forwards;
+}
+.mainDropdown > .dropdown-menu
+{
+    opacity: 0;
+    top: 5rem;
+    transition: all 400ms !important;
+}
+.mainDropdown
+{
+    padding-bottom: .8rem;
+    box-sizing: border-box;
+}
+.insteadDropdown > .dropdown-menu
+{
+    display: none;
+    opacity: 0;
+    left: 0;
+    transition: all 400ms !important;
+}
+.insteadDropdown:hover > .dropdown-menu
+{
+    display: block;
+    animation: showDropdownEnd  800ms;
+    animation-fill-mode:forwards;
+}
+.nav-link
+{
+    color: black;
+}
+.nav-link:hover,.dropdown-item:hover,.dropdown-toggle:hover
+{
+    color: var(--accent-color) !important;  
+}
+.nav-link.active
+{
+    color: var(--accent-color) !important;
+}
+.navbar-brand
+{
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.navbar-brand:hover
+{
+    color: var(--accent-color) !important;
+}
+.btn-customize
+{
+    background-color: var(--accent-color);
+    color: white;
+    width: max-content;
+    
+}
+.btnOutHover:hover
+{
+    background-color: var(--accent-color-more-white);
+    color: white !important;
+}
+.nav-link
+{
+    font-weight: 500 !important;
+}
+@keyframes showDropdownEnd
+{
+    0%{
+        opacity: 0;
+        left: 0;
+    }
+    100%
+    {
+        
+        opacity: 1;
+        left: 11rem;
+    }
+}
+@keyframes showDropdownMain
+{
+    0%{
+        opacity: 0;
+        top: 5rem;
+    }
+    100%
+    {
+        
+        opacity: 1;
+        top: 3rem;
+    }
+}
+.firstSection
+{
+    background: url(image/img/hero-bg.jpg);
+    background-size: cover;   
+    position: relative;
+    height: 100vh !important;
+}
+.firstSection::before
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.363);
+}
+.btn-customizeWithHover
+{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    scale: 1.1;
+    font-size: .9rem;
+    font-weight: 500;
+    
+}
+.btn-customizeWithHover:hover
+{
+    color: white;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+.badgeCheck
+{
+    width: 2rem;
+    margin-right: .5rem;
+}
+.includeIcon:hover > i
+{
+    left: 85% !important;
+}
+.transition
+{
+    transition: all 400ms;
+}
+.lg-card
+{
+    background-color: var(--accent-color);
+}
+.btn-light-green
+{
+    background-color:rgba(255, 255, 255, 0.151);
+    left: 28%;
+    scale: 1.1;
+}
+.btn-light-green:hover
+{
+    background-color: white;
+    color: #5fcf80;
+}
+.card-icon
+{
+    color: var(--accent-color);
+}
+.card-sc
+{
+    cursor: pointer;
+}
+.icon-bg
+{
+    transform: translateX(-1rem);
+}
+.card-sc:hover  .icon-bg
+{
+    background-color: var(--accent-color) !important;
+    
+}
+.card-sc:hover  .icon-bg > .card-icon
+{
+   color: white !important;
+
+}
+.hover-card , .hover-card > span
+{
+    cursor: pointer;
+    transition: all 200ms;
+}
+.hover-card:hover
+{
+    border-color: var(--accent-color) !important;
+    
+}
+.hover-card:hover > span
+{
+    color: var(--accent-color) !important;
+}
+.prograss-head
+{
+    height: 1px !important;
+    width: 10rem;
+    margin-top: -.7rem;
+}
+.prograss-head > div
+{
+    background-color: var(--accent-color);
+}
+.img-footer
+{
+    width: 3rem;
+    border-radius: 100%;
+}
+.card-subtitle
+{
+    font-size: .8rem;
+}
+a
+{
+    text-decoration: none !important;
+}
+.custom-popover {
+    position: relative;
+    text-decoration: none;
+}
+
+.popover-contentt {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 10;
+}
+
+.custom-popover:hover .popover-contentt {
+    display: block;
+}
+
+.popover-contentt::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+@media (min-width: 800px){
+    #navbarSupportedContent {
+        margin-left: 11rem;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    body
+    {
+        width: 99vw !important;
+        overflow-x: hidden;
+    }
+    #navbarSupportedContent {
+        margin-left: 0 !important; /* Reset the margin or apply a different style */
+    }
+    .firstSection
+    {
+        background-size:450%;
+    }
+    .card-sc
+    {
+        width: 15rem !important;
+        transform: translateX(2rem);
+    }
+    .container-flow
+    {
+        width: 100vw;
+        overflow-x: hidden !important;
+    }
+    .containerOfIcons
+    {
+        padding: 0 !important;
+        transform: translateX(2rem);
+    }
+    .hover-card 
+    {
+        width: 20rem !important;
+    }
+    .navbar
+    {
+        width: 100vw;
+    }
+    .container
+    {
+        width:90vw !important
+    }
+    .card-footer
+    {
+        width: 100% !important;
+    }
+    .card-head-custom
+    {
+        width: 100% !important;
+    }
+    .icon-bg
+    {
+        transform: translateX(0rem);
+    }
+}
